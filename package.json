@@ -1,0 +1,27 @@
+{
+  "name": "cse341",
+  "version": "1.0.0",
+  "description": "web app for course",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astoncook/cse341.git"
+  },
+  "keywords": [],
+  "author": "Aston Cook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/astoncook/cse341/issues"
+  },
+  "homepage": "https://github.com/astoncook/cse341#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
