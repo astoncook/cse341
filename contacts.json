@@ -1,0 +1,23 @@
+{
+    "contact": {
+      "firstName": "Aston",
+      "lastName": "Cook",
+      "email": "coo19025@byui.edu",
+      "favoriteColor": "Red",
+      "birthday": "10/28/2001"
+    },
+    "contact2": {
+      "firstName": "Sam",
+      "lastName": "Rod",
+      "email": "SamRod@test.com",
+      "favoriteColor": "Purple",
+      "birthday": "08/27/1998"
+    },
+    "contact3": {
+      "firstName": "Jen",
+      "lastName": "Bowden",
+      "email": "JenC@test.com",
+      "favoriteColor": "Yellow",
+      "birthday": "02/14/86"
+    }
+  }

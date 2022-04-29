@@ -2,10 +2,10 @@
   "name": "cse341",
   "version": "1.0.0",
   "description": "web app for course",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/astoncook/cse341#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
