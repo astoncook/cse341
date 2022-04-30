@@ -1,13 +1,14 @@
 const routes = require('express').Router();
 const connect = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
+
 routes.get('/', (req, res) => {
 
     const results = connect.getCollection().find();
 
     results.toArray().then((documents) => {
         res.status(200).json(documents);
-        console.log(`Returned All Contacts`);
+        console.log(`Returned Contacts Successfully`);
     });
 });
 
@@ -24,8 +25,5 @@ routes.get('/:id', (req, res) => {
     });
 
 });
-
-
-
 
 module.exports = routes;
