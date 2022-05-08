@@ -5,7 +5,7 @@ GET http://localhost:3000/contacts
 GET http://localhost:3000/contacts/626d4d098feb6a39c3a8f95d
 
 ### Create contact
-POST http://localhost:8080/contacts HTTP/1.1
+POST http://localhost:3000/contacts HTTP/1.1
 content-type: application/json
 
 {
@@ -17,7 +17,7 @@ content-type: application/json
 }
 
 ### PUT contact
-PUT http://localhost:8080/contacts/insertnumber HTTP/1.1
+PUT http://localhost:3000/contacts/626d4d098feb6a39c3a8f95e HTTP/1.1
 content-type: application/json
 
 {
@@ -28,7 +28,7 @@ content-type: application/json
     "birthday":"10/28/2001"
 }
 ### DELETE contact
-DELETE http://localhost:8080/contacts/insertnumber HTTP/1.1
+DELETE http://localhost:3000/contacts/626d4d098feb6a39c3a8f95f HTTP/1.1
 
 // PRODUCTION Deploy
 ### 
@@ -49,7 +49,7 @@ content-type: application/json
 }
 
 ### PUT contact
-PUT https://cse-341-api.herokuapp.com/contacts/insertnumber HTTP/1.1
+PUT https://cse-341-api.herokuapp.com/contacts/626d4d098feb6a39c3a8f95e HTTP/1.1
 content-type: application/json
 
 {
@@ -60,4 +60,4 @@ content-type: application/json
     "birthday":"10/28/2001"
 }
 ### DELETE contact
-DELETE https://cse-341-api.herokuapp.com/contacts/insertnumber HTTP/1.1
+DELETE https://cse-341-api.herokuapp.com/contacts/626d4d098feb6a39c3a8f95fr HTTP/1.1

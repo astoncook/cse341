@@ -33,12 +33,8 @@ routes.post('/', (req, res) => {
         favoriteColor: req.body.favoriteColor,
         birthday: req.body.birthday
     };
-    const results = connect.getCollection().find().insertOne(contact);
-    if (response.acknowledged) {
-        res.status(201).json(response);
-    } else {
-        res.status(500).json(response.error || 'Error occurred while creating the contact.');
-    }
+    const response = connect.getCollection().insertOne(contact);
+    res.json(response);
 });
 
 routes.put('/:id', (req, res) => {
@@ -50,32 +46,20 @@ routes.put('/:id', (req, res) => {
         favoriteColor: req.body.favoriteColor,
         birthday: req.body.birthday
     };
-    const results = connect.getCollection()
-        .getDb()
-        .db()
-        .collection('contacts')
-        .replaceOne({
-            _id: userId
-        }, contact);
+    const response = connect.getCollection().replaceOne({
+        _id: userId
+    }, contact);
     console.log(response);
-    if (response.modifiedCount > 0) {
-        res.status(204).send();
-    } else {
-        res.status(500).json(response.error || 'Error occurred while updating the contact.');
-    }
+    res.json(response);
 });
 
 routes.delete('/:id', (req, res) => {
     const userId = new ObjectId(req.params.id);
-    const results = connect.getCollection().remove({
+    const response = connect.getCollection().deleteOne({
         _id: userId
     }, true);
     console.log(response);
-    if (response.deletedCount > 0) {
-        res.status(204).send();
-    } else {
-        res.status(500).json(response.error || 'Error occurred while deleting the contact.');
-    }
+    res.json(response);
 });
 
 module.exports = routes;
